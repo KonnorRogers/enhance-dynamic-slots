@@ -1,0 +1,19 @@
+<script type="module" src="/_public/browser/index.mjs"></script>
+<script type="module">
+  setTimeout(() => {
+  document.querySelector("my-card").querySelector("[slot='image']").removeAttribute("slot")
+  }, 5000)
+</script>
+
+<main style="padding: 1rem">
+  <my-card>
+    <div slot="image">In 5 seconds I should move to the default slot under the header.</div>
+  </my-card>
+
+  <br><br>
+
+  <my-card>
+    With a default slot.
+  </my-card>
+</main>
+
